@@ -1,0 +1,2009 @@
+           /* TABLE OF CONTENTS */
+/* ------------------
+1. General
+2. Navbar
+3. Banner
+4. Home
+5. Product
+6. About
+6. Testimonials
+7. Contact
+
+-------------------- */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 1 General */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('/fonts/fonts.css');
+@import url('/font-awesome/css/all.min.css');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Background Color */
+    --primary-color: #BC0101;
+    --secondary-color: #101010;
+    --bg-light-pink: #FCF5F5;
+    --bg-white: #ffffff;
+    --border-dark-pink: #F0C7C7;
+
+    /* Text Style */
+    --primary-font: 'WorkSans Medium', sans-serif;
+    --secondary-font: 'Roboto Light', sans-serif;
+    --primary-text: #101010;
+    --secondary-text: #555555;
+    --text-white: #fff;
+    --text-gray: #888;
+}
+
+body {
+    font-family: var(--secondary-font);
+    background-color: var(--bg-white);
+}
+
+a{
+    text-decoration: none !important;
+}
+
+a ,
+.primaryBtn,
+.secondaryBtn,
+.blackBtn,
+.signInLink ul li:nth-child(1):hover ul.signInInnerLinks,
+.benefitIcon,
+.productCategory h5,
+.productCategory p,
+.card.productCategory,
+.newsLetterInput button,
+.mainFooter .linkWidget li a,
+.mainFooter .linkWidget li a,
+.carousel-control-prev, .carousel-control-next,
+.carousel-control-prev span , .carousel-control-next span,
+.productCategoryImg,
+#featuredProducts h4,
+.dasboardSidebarMenu li a,
+.productSidebarMenu li a,
+.productItem h5 a,
+.productItemWrapper .productItemHover,
+.productDetailsShareIcons ul li i,
+.productDetailsBtnOutline,
+.productDetailsBtnFill {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+a:hover,
+.primaryBtn:hover,
+.secondaryBtn:hover,
+.blackBtn:hover,
+.signInLink ul li:nth-child(1):hover ul.signInInnerLinks,
+.benefitIcon:hover,
+.productCategory h5:hover,
+.productCategory p:hover,
+.card.productCategory:hover,
+.aboutUsContent .blackBtn:hover,
+.newsLetterInput button:hover,
+.mainFooter .linkWidget li a:hover,
+.carousel-control-prev:hover, .carousel-control-next:hover,
+.carousel-control-prev:hover span , .carousel-control-next:hover span,
+.productCategoryImg:hover,
+#featuredProducts h4:hover,
+.dasboardSidebarMenu li a:hover,
+.productSidebarMenu li a:hover,
+.productItem h5 a:hover,
+.productItemWrapper:hover .productItemHover,
+.productDetailsShareIcons ul li:hover i,
+.productDetailsBtnOutline:hover,
+.productDetailsBtnFill:hover   {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+a:hover {
+    text-decoration:none !important;
+}
+
+::-webkit-scrollbar {
+    width: .375rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-light-green);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+.wrapper{
+    padding:6.25rem 0;
+}
+.primaryBtn,
+.secondaryBtn,
+.blackBtn{
+    display: inline-block;
+    text-align: center;
+    padding:.5rem 1.7rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    border: none;
+    /*text-transform: uppercase;*/
+}
+.blackBtn{
+    background-color:var(--secondary-color);
+    color:var(--text-white);
+}
+.blackBtn:hover {
+    background-color:var(--primary-color);
+    border-color:var(--primary-color);
+    color:var(--text-white);
+    text-decoration: none;
+}
+.primaryBtn:hover{
+    background-color:var(--primary-color);
+    border-color:var(--primary-color);
+    color:var(--text-white);
+    text-decoration: none;
+}
+.secondaryBtn{
+    border-color:var(--bg-white);
+    color:var(--primary-color);
+    font-family: Roboto Regular, sans-serif;
+}
+.secondaryBtn:hover{
+    background-color:var(--primary-color);
+    border-color:var(--primary-color);
+    color:var(--text-white);
+}
+h1{
+    font-size: 3rem;
+    margin-bottom:1.25rem;
+    font-weight: 600;
+    color:var(--text-white);
+    font-family: var(--primary-font);
+    text-transform:uppercase;
+}
+h2{
+    font-size: 2.188rem !important; 
+    font-weight: 600;
+    text-transform: uppercase;
+    color:var(--primary-text);
+    font-family: var(--primary-font);
+}
+h3{
+    font-size: 1.875rem; 
+    font-weight: 600;
+    color:var(--primary-text);
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+}
+h4{
+    font-size: 1.4rem; 
+    font-weight: 500;
+    line-height: 1.75rem;
+    color:var(--primary-text);
+    font-family:var(--primary-font);
+    text-transform: uppercase;
+}
+h5{
+    font-size: 1rem; 
+    line-height: 1.2;
+    font-weight: 600;
+    color:var(--primary-text);
+    margin-bottom:.9375rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+}
+h6{
+    font-size: .875rem; 
+    font-weight: 300;
+    color:var(--primary-text);
+    margin-bottom:.9375rem;
+    font-family: var(--primary-font);
+}
+p{
+    font-size: 1rem;
+    color:var(--text-gray);
+    line-height: 1.625rem;
+} 
+/*.card{
+    background-color:var(--bg-white);
+    border: 0;
+    padding: 0;
+    -webkit-transition:all .4s;
+    transition:all .4s;
+    border:0;
+}*/
+@keyframes movebounce{
+    0%{
+        -webkit-transform:translateY(0);
+        transform:translateY(0);
+    }
+    50%{
+        -webkit-transform:translateY(1.25rem);
+        transform:translateY(1.25rem);
+    }
+    100%{
+        -webkit-transform:translateY(0);
+        transform:translateY(0);
+    }
+}
+
+/* 2 Navbar CSS ---------------------------------------------------------------------------- */ 
+
+#siteHeader {
+    background-color: var(--secondary-color);
+}
+.stickyHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--secondary-color);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+}
+.middleHeader {
+    background-color: var(--secondary-color);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.companyLogo {
+    display: inline-block;
+    margin: 0;
+}
+.companyLogo img {
+    /* width: 80%; */
+}
+.headerSocialIcons {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0;
+}
+.headerSocialIcons li , .upperHeaderMenu li {
+    padding-right:0.8rem;
+    float:left;
+}
+.upperHeaderMenu li {
+    padding-right:0.4rem;
+}
+.headerSocialIcons li a , .upperHeaderMenu li a  {
+    color: var(--text-white);
+}
+.headerSocialIcons li a:hover , .upperHeaderMenu li a:hover {
+    color: var(--primary-color);
+}
+.upperHeaderMenu {
+    float: right;
+    margin-bottom: 0;
+}
+.upperHeaderMenu li a , .upperHeaderMenu li span {
+    color: var(--text-white);
+    font-size: 0.9rem;
+}
+.upperHeader {
+    padding: 0.3rem 0 0;
+    border-bottom:1px solid rgba(255, 255, 255, 0.1);
+}
+.middleHeaderNavbar {
+    float: right;
+    padding:0 !important;
+}
+.middleHeaderWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+.navbar li .nav-link {
+    font-family: var(--secondary-font);
+}
+/* .middleHeaderNavbar ul li:hover a::after {
+    position: absolute;
+    content: "";
+    color:#1b1b1b;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left:0;
+    right:0;
+    top: 0;
+} */
+.middleHeaderNavbar li {
+    position: relative;
+}
+.middleHeaderNavbar li a {
+    color: var(--text-white);
+}
+.middleHeaderNavbar .nav-item a:hover , .middleHeaderNavbar .nav-item a:focus  , .middleHeaderNavbar .dropdown-menu a:hover {
+    color: var(--text-white); 
+}
+.middleHeaderNavbar .dropdown-menu {
+    background-color: #ffffff;
+    height: 100px;
+    /* display: block; */
+    padding: 0;
+}
+.middleHeaderNavbar .dropdown-menu .dropdown-item {
+    border-bottom: 1px solid #ebebeb;
+    color: var(--secondary-text);
+}
+/* .middleHeaderNavbar .nav-item a.nav-link:hover .dropdown-menu {
+    display: block;
+} */
+#navbarNavDropdown ul.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: var(--primary-color) !important;
+}
+.buySellBtn {
+    float: right;
+    font-family:Roboto Regular , sans-serif;
+    border: 1px solid rgba(252,245,245,0.7);
+}
+.middleHeaderNavbar .nav-item a.buySellBtn:hover {
+    color:#ffffff; 
+}
+.headerSearchInput select {
+    height:40px;
+    padding: 2px 10px;
+    display: inline-block;
+    float: left;
+    background-color: var(--bg-white);
+    color:var(--secondary-text);
+    border-right:1px solid rgba(0, 0, 0, 0.2);
+    border-top:0;
+    border-bottom:0;
+    border-left:0;
+}
+.headerSearchInput input::placeholder {
+    color:var(--secondary-text);
+}
+#searchCategory:focus-visible , .searchBoxWrapper input , #loginOption:focus-visible , .middleHeaderNavbar .nav-item a:focus-visible {
+    outline: none;
+}
+.headerSearchInput input {
+    height:40px;
+    border: none;
+    padding: 5px 15px;
+    background-color: var(--bg-white);
+    color: var(--secondary-text);
+    border-left:1px solid var(--bg-dark-gray);
+    position: relative;
+    width: 100%;
+}
+.headerSearchInput button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    
+}
+.headerSearchInput {
+    background-color:var(--bg-white);
+    width:100%;
+}
+.categorySearchIcon {
+    color:var(--secondary-text);
+}
+.searchBoxWrapper {
+    position: relative;
+    float: left;
+    width: 70%;
+}
+
+.subHeader {
+    background-color: var(--primary-color);
+}
+.categoryMenu p{
+    margin: 0;
+    color: var(--text-white);
+}
+#signIn {
+    background-color: var(--bg-light-pink);
+}
+.categoryMenu a i , .signInLink a i {
+    color: var(--text-white);
+}
+.signInLink {
+    margin: 0;
+    color: var(--primary-text);
+    float: right;
+    position: relative;
+}
+.signInInnerLinks {
+    padding: 0.5rem;
+    background-color: var(--bg-white);
+}
+.signInInnerLinks {
+    display:none;
+    color: var(--text-gray);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 999;   
+    box-shadow: 1.5px 1.5px 5px 0 #ddd;
+}
+.signInLink ul {
+    margin-bottom:0;
+}
+.signInLink ul li a {
+    color:var(--text-white);
+}
+.signInLink ul li ul li a {
+    color:var(--secondary-text);
+}
+.signInLink ul li:nth-child(1):hover ul.signInInnerLinks {
+    display: block;
+}
+.signInLink ul li:nth-child(1) a:hover ul.signInInnerLinks::after  {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 100px;
+    border-color: transparent transparent #FF4532 transparent;
+    transform: rotate(0deg);
+} 
+
+/* Navbar CSS end here ---------------------------------------------------------------------- */
+
+
+/* Banner Slider ---------------------------------------------------------------------------- */
+
+.homeWrapper .homeBanner1,
+.homeWrapper .homeBanner2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:100% center;
+    min-height:500px;
+    position:relative;
+}
+.homeWrapper .homeBanner1{
+    background-image: url(../images/banner-1.jpg);
+}
+.homeWrapper .homeBanner2{
+    background-image: url(../images/banner-2.jpg);
+}
+.homeWrapper .homeBanner .homeBannerText {
+    position:absolute;
+    top:35%;
+    width: 35%;
+    /*transform:translate(-200%, -50%);*/
+}
+.homeBannerText p {
+    background-color:var(--primary-color);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    letter-spacing: 0.7px;
+    border-radius: 3px;
+}
+.homeBannerText h1 {
+    font-family:WorkSans Medium;
+    color:var(--secondary-color);
+}
+.homeBannerText h1 strong {
+    font-weight:800;
+    color:var(--primary-color);
+}
+.homeWrapper .homeBanner .homeBannerText p {
+    color:var(--text-white);
+}
+
+/* Banner CSS end here ---------------------------------------------------------------------------- */
+
+
+/* Product slider CSS starts here ---------------------------------------------------------------------- */
+
+
+#featuredProducts .sectionHeading::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+#featuredProducts {
+    background-color:var(--bg-light-pink);
+}
+.productImg {
+    margin: 0.9rem 0.9rem 0;
+    padding: 1.25rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--bg-light-pink);
+    border-radius: 0.2rem;
+    border: 1px var(--border-dark-pink);
+    border-style: dashed;
+}
+.productImg img {
+    /*width:80% !important;*/
+}
+#featuredProducts h4:hover , .seeMoreProducts h4:hover{
+    color: var(--primary-color);
+}
+#featuredProducts .card , .seeMoreProducts .card {
+    border: unset;
+    background-color: transparent;
+}
+#featuredProducts .item , .seeMoreProducts .item{
+    border-radius: 4px;
+    border: 1px var(--border-dark-pink);
+    border-style: dashed;
+    background-color:#ffffff;
+}
+#featuredProducts .card-text , .seeMoreProducts .card-text {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+#featuredProducts .card-body , .seeMoreProducts .card-body{
+    padding: 1rem 1rem 1.5rem;
+}
+#featuredProducts .owl-prev , .seeMoreProducts .owl-prev {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+}
+#featuredProducts .owl-next , .seeMoreProducts .owl-next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+}
+#featuredProducts .owl-prev span , #featuredProducts .owl-next span , .seeMoreProducts .owl-prev span , .seeMoreProducts .owl-next span {
+    font-size: 5rem;
+}
+.owl-stage-outer:hover .owl-prev , .owl-stage-outer:hover .owl-next {
+    opacity: 1;
+}
+
+
+
+/* Product Clider CSS ends here ---------------------------------------------------------------------- */
+
+/* Seller/Buyer Benefits CSS ---------------------------------------------------------------------- */
+
+#benefitsSection {
+    padding: 5rem 0;
+}
+.s-p {
+    padding:5rem 0;
+}
+.sectionHeading {
+    position: relative;
+    padding-bottom: 3.75rem;
+    margin-bottom: 0;
+}
+.sectionHeading span {
+    font-weight: 900;
+}
+.sectionHeading::after {
+    width:3rem;
+    height:0.3rem;
+    content:"";
+    position:absolute;
+    background-color:var(--primary-color);
+    left:0;
+    top: 3.1rem;
+}
+.sellerBuyerBenefits li h4 {
+    padding-bottom: 1.2rem;
+    min-height: 7.5rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.sellerBuyerBenefits ul {
+    width: 90%;
+    padding: 0;
+}
+.benefitIcon {
+    padding: 1.6rem 0;
+    font-size: 2.5rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 0.3rem solid var(--primary-color);
+    text-align: center;
+    vertical-align: middle;
+    color: var(--primary-color);
+    display: inline-block;
+    margin-right:1.2rem;
+    cursor: pointer;
+    float: left;
+}
+.benefitIcon:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+.sectionHeading span {
+    font-weight: lighter !important;
+}
+
+/* Seller/Buyer Benefits CSS end here ------------------------------------------------------------ */
+
+
+/* Top Categories CSS ---------------------------------------------------------------------------- */
+
+#topCategories h2.sectionHeading::after {
+    left:0;
+    right:0;
+    margin:0 auto;
+}
+#topCategories h2.sectionHeading {
+    text-align: center;
+}
+.productCategory h5 , .eCatalogueItem p {
+    display:block;
+    color:var(--secondary-color);
+    text-transform:uppercase;
+    font-weight: 600;
+}
+.productCategory:hover h5  , .eCatalogueItem:hover p {
+    color:var(--primary-color);
+}
+.productCategory p {
+    color:var(--text-gray);
+    margin-bottom:0.5rem;
+}
+.productCategory p:hover {
+    margin-left:0.5rem;
+}
+.card.productCategory , .card.eCatalogueItem {
+    padding:1rem;
+    display: inline-block;
+    border-radius:4px;
+    border:1px var(--border-dark-pink);
+    border-style: dashed;
+    width: 100%;
+}
+.card.productCategory:hover {
+    border:1px var(--primary-color);
+    border-style: dashed;
+}
+#topCategories .card-body , #eCatalogue .card-body {
+    padding:0;
+}
+.productCategoryImg {
+    min-height:8.5rem;
+    height: 8.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productCategoryImg img , .eCatalogueImg img {
+    width: 100%;
+}
+.productCategory:hover .productCategoryImg img  {
+    width:107%;
+} 
+/* #topCategories .col {
+    max-width: 20%;
+    margin-left: 0;
+}  */
+#topCategories {
+    background: rgb(252,245,245);
+    background: -moz-linear-gradient(180deg, rgba(252,245,245,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(252,245,245,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(252,245,245,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcf5f5",endColorstr="#ffffff",GradientType=1);
+}
+
+/* Top Categories CSS end here*---------------------------------------------------------------- */
+
+
+/*About Us* ----------------------------------------------------------------------------------- */
+
+.aboutUsImg {
+    width:100%;
+}
+#aboutUs{
+    background-color: var(--primary-color);
+    position: relative;
+}
+#aboutUs::before {
+    content:url("../images/about-us.jpg");
+    height: 100%;
+    position: absolute;
+    left: -5rem;
+    top:0;
+    overflow: hidden;
+}
+.aboutUsContent ul li {
+    display: inline-block;
+    padding-right: 1rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+.aboutUsContent .sectionHeading::before {
+    height: 4rem;
+    width:15.5rem;
+    content:"";
+    /* background-color: var(--bg-white); */
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left:-60px;
+}
+.aboutUsContent .sectionHeading {
+    color: var(--text-white);
+}
+.aboutUsContent  .sectionHeading::after {
+    background-color: var(--text-white);
+}
+
+.aboutUsContent h5 , .aboutUsContent p {
+    color: var(--text-white);
+}
+.aboutUsContent .blackBtn:hover {
+    background-color: var(--bg-white);
+    color: var(--primary-text);
+}
+.aboutUsContent .aboutsUsTagLine , .aboutUsContent h4 {
+    font-style: italic;
+    color: #ffffff;
+}
+
+
+
+
+
+/* About Us CSS ends here -------------------------------------------------------------------- */
+
+
+/* Reviews/Partner CSS  ------------------------------------------------------------------- */
+
+
+.testimonialWrapper {
+    border:1px solid var(--text-gray);
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    position: relative;
+}
+.testimonials {
+    position: relative;
+}
+.testimonials::before {
+    content:"\f10d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 800;
+    font-size: 3rem;
+    color:var(--primary-color);
+    background-color: var(--bg-white);
+    padding: 0rem 0.6rem;
+    position: absolute;
+    top:-2.2rem;
+    left:2.5rem;
+    z-index: 111;
+}
+.testimonialWrapper p {
+    color: var(--secondary-color);
+}
+.testimonialWrapper span {
+    color:var(--secondary-text);
+}
+.testimonialWrapper span strong {
+    display: block;
+}
+.testimonials .carousel-control-prev,
+.testimonials .carousel-control-next,
+.esteemedCustomer .carousel-control-prev,
+.esteemedCustomer .carousel-control-next {
+    width: 2.8rem !important;
+    height: 2.8rem;
+    border: 1px solid var(--text-gray);
+    border-radius: 100%;
+    color: var(--text-gray);
+    background: var(--bg-white);
+    top:43% !important;
+    opacity: 1 !important;
+}
+.testimonials .carousel-control-prev {
+    left:-1.3rem !important;
+}
+.testimonials .carousel-control-next {
+    right:-1.3rem !important;
+}
+.testimonials .carousel-control-prev span,
+.testimonials .carousel-control-next span ,
+.customerSlider .carousel-control-prev span,
+.customerSlider .carousel-control-next span{
+    color: var(--text-gray);
+}
+.testimonials .carousel-control-prev:hover,
+.testimonials .carousel-control-next:hover,
+.esteemedCustomer .carousel-control-prev:hover,
+.esteemedCustomer .carousel-control-next:hover {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.testimonials .carousel-control-prev:hover span,
+.testimonials .carousel-control-next:hover span,
+.esteemedCustomer .carousel-control-prev:hover span,
+.esteemedCustomer .carousel-control-next:hover span {
+    color: var(--text-white);
+}
+.esteemedCustomerWrapper li {
+    display: inline-block;
+    float: left;
+}
+.esteemedCustomerWrapper {
+    width: 85%;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.esteemedCustomerWrapper li a  {  
+    padding: 0.6rem;
+    width: 7rem;
+    height: 7rem;
+    display: inline-block;
+}
+.customerHoverImg {
+    display: none;
+}
+
+.esteemedCustomerWrapper li a:hover .customerHoverImg {
+    display: inline-block;
+}
+.esteemedCustomerWrapper li a:hover .customerImg {
+    display: none;
+}/* Reviews/Partner CSS ends here ------------------------------------------------------------------- */
+
+
+
+/* 4 Footer --------------------------------------------------------------------------------- */
+
+.newsLettreHeading {
+    display:inline-block;
+}
+.newsLettreHeading p {
+    color:var(--secondary-text);
+    margin-bottom: 0;
+}
+.newsLettreHeading h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.newsLetterInput {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+.newsLetterInput input {
+    width: 25rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.newsLetterInput input:focus-visible {
+    outline: none;
+}
+.newsLetterInput i {
+    position: absolute;
+    left: 0.8rem;
+    z-index: 111;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsLetterInput input , .newsLetterInput button {
+    height:2.5rem;
+    border: none;
+    padding: 0.5rem 2.4rem;
+}
+.newsLetterInput button {
+    position: absolute;
+    right: 0;
+    padding:0 1.3rem;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+.newsLetterInput button:hover {
+    background-color: var(--secondary-color);
+}
+.newsLetterFooter {
+    /* background-color: var(--bg-light-pink); */
+    background-color: #ffe5e5;
+}
+.backToTop {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 0.8rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+.mainFooter {
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid rgb(255,255,255, 0.1);
+}
+.mainFooter ul li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+    font-size: .875rem;
+}
+.mainFooter .linkWidget li a, .mainFooter p {
+    color: var(--secondary-text);
+    font-size: .875rem;
+    padding-left: 1.2rem;
+    position: relative;
+    text-decoration: none;
+}
+.contactInfo ul li a {
+    color: var(--secondary-text);
+}
+.mainFooter .linkWidget li a::before {
+    content: '\f105';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.mainFooter .linkWidget li a:hover {
+    margin-left: 0.625rem;
+    color: var(--primary-color);
+}
+.mainFooter h5 {
+    color: var(--text-white);
+}
+.contactInfo ul li {
+    position: relative;
+    padding-left: 1.4rem;
+}
+.contactInfo ul li::before {
+    font-family: "Font Awesome 6 Free"; 
+	font-weight: 800;
+    font-size: 1rem;
+    color: var(--primary-text);
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+.contactInfo ul li:first-child::before {
+    content:"\f3c5";
+}
+.contactInfo ul li:nth-child(2)::before{
+    content:"\f095";
+}
+.contactInfo ul li:nth-child(3)::before{
+    content:"\f0e0";
+}
+.contactInfo ul li:nth-child(4)::before{
+    content:"\f0ac";
+}
+.contactInfo ul li a span {
+    display: block;
+}
+.contactInfo ul li a h5 {
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.copyrightSection .socialNetwork {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding:0;
+}
+.copyrightSection .socialNetwork li {
+    display: inline-block;
+    float: left;
+}
+.copyrightSection .socialNetwork a {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    margin-right: 0.5rem;
+    line-height: 2rem;
+    font-size: .875rem;
+    display: inline-block;
+    border: 0.125rem solid var(--secondary-text);
+    color: var(--secondary-text);
+    text-align: center;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.copyrightSection .socialNetwork a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-white);
+    transform: translateY(-0.1875rem);
+}
+.copyrightSection {
+    background-color: var(--secondary-color);
+}
+.copyrightSection p , .copyrightSection a  {
+    display: inline-block;
+    color: var(--secondary-text);
+}
+.copyright a:hover {
+    color:var(--primary-color);
+}/* 4 Footer ends here --------------------------------------------------------------------------------- */
+
+
+
+/* 3 Buy/Sell Btns --------------------------------------------------------------------------- */
+
+#buySellBtnSection {
+    text-align: center;
+    background-color: var(--bg-light-pink);
+
+}
+.buySellBtnWrapper ul .blackBtn {
+    display: block;
+    width: 175px;
+    margin: 0 auto;
+}
+.buySellBtnWrapper ul {
+    padding-left: 0;
+}
+.buySellBtnWrapper   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50vh;
+    padding: 2rem;
+    /* background-color: var(--bg-white); */
+    background: #ffffff url("../images/banner-1.jpg") no-repeat center top;
+    background-size: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}/* Buy/Sell Btns ends here ------------------------------------------------------------------- */
+
+
+/* Sign In Section --------------------------------------------------------------------------- */
+
+
+.form-control:focus {
+    box-shadow:unset !important;
+    border-color:unset !important;    
+}
+#signIn .form-check-input:focus {
+    box-shadow:unset;
+}
+.signInForm {
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.signInForm p , .forgotPasswordWrapper p {
+    color: var(--primary-text);
+}
+#signIn .form-check-input:checked , #signUp .form-check-input:checked , .showPriceCheckBox .form-check-input:checked {
+    background-color:var(--primary-color);
+    border-color:var(--primary-color);
+}
+#signIn form , .forgotPasswordWrapper {
+    width: 40%;
+    margin: 0 auto;
+}
+#signIn .blackBtn , #forgotPassword .blackBtn {
+    width: 100%;
+}
+.form-forgot-label {
+    float: right;
+}
+.form-forgot-label a , .signUpLabel a {
+    color: var(--secondary-text);    
+}
+.signUpLabel {
+    color: var(--secondary-text);
+}
+.signUpLabel a {
+    font-weight: 500;  
+    border-bottom: 1px solid var(--primary-text);
+    color: var(--primary-text);
+}
+.signUpLabel a:hover {
+    color: var(--secondary-text);
+    border-bottom: 1px solid var(--secondary-text);
+}
+.form-forgot-label a:hover{
+    color: var(--primary-text);
+    text-decoration: underline !important;
+}
+.signInForm input[type="text"] , .signUpForm input[type="text"] , .contactForm form input[type="text"]  {
+    position: relative;
+}
+.signInForm h3 strong , .signUpForm h3 strong , .productEnquiryForm h3 strong , .seeMoreProducts h2 strong , .contactForm h3 strong {
+    color: var(--primary-color);
+}
+.inputWithIcon i {
+    position: absolute;
+    top: 10px;
+    right:10px;
+}
+.inputWithIcon , .cPasswordInput{
+    position: relative;
+}/* Sign In Section ends here ------------------------------------------------------------------- */
+
+
+
+/* Sign Up Section --------------------------------------------------------------------------- */
+
+#signUp {
+    background-color: var(--bg-light-pink); 
+}
+.signUpForm {
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#signUp p {
+    color: var(--primary-text);
+}
+#signUp .form-group {
+    margin-bottom: 1rem;
+}
+#signUp .form-group label {
+    margin-bottom: 0.5rem;
+}
+#signUp .form-check-input {
+    margin-left: 0;
+    /* margin-top: 0; */
+}/* Sign Up Section ends here ------------------------------------------------------------------- */
+
+
+
+/* Dashboard Page --------------------------------------------------------------------------- */
+
+#dashboard {
+    background-color: var(--bg-light-pink);
+}
+.dashboardMainContent .breadcrumb {
+    padding: 0.75rem 0rem;
+}
+.userAccount {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.userAccount a {
+    color: var(--secondary-text);
+}
+.dasboardSidebarWrapper {
+    border-right: 1px solid #ebebeb;
+    background-color: var(--bg-white);
+    height: 100%;
+    /*overflow-y: scroll;*/ 
+    margin-left: -15px;
+}
+.userImage {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.userImage img {
+    width: 100%;
+    border-radius: 100%;
+}
+.dasboardSidebarMenu {
+    padding: 0;
+    margin: 0;
+}
+.dasboardSidebarMenu li {
+    padding: 1rem 1rem 1rem 3rem;
+    border-bottom: 1px solid #ebebeb;
+}
+.dasboardSidebarMenu li i {
+    margin-right: 1rem;
+}
+.dasboardSidebarMenu li a:hover , .dasboardSidebarMenu li:active a {
+    color:var(--primary-color) !important;
+}
+.dasboardSidebarMenu li a {
+    font-family:var(--secondary-font);
+    font-weight: 600;
+    color: var(--primary-text);
+}
+.dashboardMainContent  {
+    padding-top: 1rem;
+}
+.dashboardMainContent .breadcrumb {
+    background-color: transparent;
+}
+.dashboardMainContent .breadcrumb .breadcrumb-item a {
+    color:var(--secondary-text);
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "/" !important;
+    /* font-family: "Font Awesome 6 Free"; */
+    color: var(--secondary-text);
+}
+.sorting select {
+    border: none;
+    width: 85px;
+    float: right;
+    background-color: transparent;
+}
+.sorting select:focus {
+    background-color: transparent;
+}   
+.sorting .form-select {
+    padding: 0.375rem 0 0.375rem 0.75rem;
+    background-position: right 0rem center;
+}
+.dashboardCard {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #ffffff;
+    vertical-align: middle;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+.dashboardCard p{
+    color: var(--text-gray);
+}/* Dashboard Page Ends here --------------------------------------------------------------------------- */
+
+
+
+/* My Listed Product Page CSS --------------------------------------------------------------------------- */
+
+.addProductWrapper {
+    padding: 2rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius: 5px;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.addProductWrapper h4 {
+    text-transform: unset;
+}
+.addProductWrapper p {
+    color: var(--secondary-text);
+}
+.pdescription textarea {
+    width: 100%;
+}
+.addProductForm p , .changePassword p , .productEnquiryForm p , .contactForm p {
+    color: var(--secondary-text);
+}
+.addProductForm  {
+    padding-bottom: 3rem;
+}
+.addProductForm .form-group , .productEnquiryForm .form-group , .contactForm .form-group {
+    margin-bottom: 1rem;
+}
+.addProductForm form .form-check-input , .productEnquiryForm form .form-check-input , .contactForm form .form-check-input {
+    margin-left: 0;
+}
+.showPriceCheckBox {
+    margin-top: 2rem;
+}
+.fileUpload {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+}
+.fileUpload input {   
+    width: 107px;
+    margin: 0 auto;
+}
+.saveBtn {
+    text-align: center;
+}
+.fileUpload i {
+    font-size: 1.5rem;
+}/* My Listed Product Page CSS ends here --------------------------------------------------------------------------- */
+
+
+/* Change Password Page CSS  --------------------------------------------------------------------------- */
+
+.cPasswordInput i {
+    position: absolute;
+    top: 40px;
+    right:10px;
+}
+.changePassword {
+    width: 40%;
+    margin: 0 auto;
+}
+.changePassword form {
+    margin-bottom: 3rem;
+}
+.changePassword form .form-group {
+    margin-bottom: 1rem;
+}
+/* Change Password Page CSS ends here --------------------------------------------------------------------------- */
+
+
+/* Forgot Password Page CSS  --------------------------------------------------------------------------- */
+
+.forgetPasswordIcon {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+}
+#forgotPassword {
+    background-color: var(--bg-light-pink);
+}
+.forgotPasswordWrapper {
+    width: 35%;
+    margin: 0 auto;
+}
+.forgotPasswordWrapper {
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.forgotPasswordWrapper h3 strong {
+    color: var(--primary-color);
+}
+/* Forgot Password Page CSS ends here --------------------------------------------------------------------------- */
+
+
+/* Products Page CSS --------------------------------------------------------------------------- */
+
+.productsWrapper .breadcrumb .breadcrumb-item a {
+    color: var(--secondary-text);
+}
+.productSidebarWrapper {
+    border-right: 1px solid #ebebeb;
+    background-color: var(--bg-white);
+    height: 100%;
+    /*overflow-y: scroll;*/ 
+    margin-left: -15px;
+    padding-top: 1.8rem;
+}
+
+.accordion-single  {
+    border-bottom: 1px solid #efefef;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-single h5 {
+    padding: 0 0 1rem 2rem;
+    font-weight: 600;
+}
+  
+.accordion-single-title {
+    border-top: 1px solid #efefef;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    position: relative;
+    font-size: 1rem;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+  
+.accordion-single-title::after{
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px #999;
+    border-right: solid 2px #999;
+    transform: translateY(-50%) rotate(135deg);
+}
+  
+.accordion-single-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+}
+
+.accordion-single-content li {
+    padding: 0.5rem 1rem;
+}
+
+.accordion-single-item.is-open .accordion-single-content  {
+    max-height: 200px;
+}
+  
+.accordion-single-item.is-open .accordion-single-title::after  {
+    transform: translateY(-50%) rotate(315deg);
+}
+li.accordion-single-item a:hover , li.accordion-single-item:active a {
+    color:var(--primary-color) !important;
+}
+li.accordion-single-item a {
+    font-family:var(--secondary-font);
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+/* .productSidebarMenu {
+    padding: 4.5rem 0 0;
+    margin: 0;
+}
+.productSidebarMenu li {
+    padding: 0.6rem 3rem;
+    border-bottom: 1px solid #ebebeb;
+}
+.productSidebarMenu li h5 {
+    font-weight: 600;
+}
+.productSidebarMenu li i {
+    margin-right: 1rem;
+}
+.productSidebarMenu li a:hover , .productSidebarMenu li:active a {
+    color:var(--primary-color) !important;
+}
+.productSidebarMenu li a {
+    font-family:var(--secondary-font);
+    font-weight: 600;
+    color: var(--primary-text);
+} */
+.productsMainItemsWrapper .breadcrumb {
+    padding: 0.2rem 0.5rem;
+    background-color: var(--bg-white);
+    border-radius: 3px;
+}
+.productsMainItemsWrapper {
+    padding: 1.5rem;
+}
+.products {
+    background-color: var(--bg-light-pink);
+}
+.productsMainItemsWrapper .breadcrumb .breadcrumb-item a {
+    color:var(--secondary-text);
+}
+.productItemWrapper {
+    background-color: var(--bg-white);
+    padding: 1rem;
+    position: relative;
+    border-radius: 4px;
+    border: 1px var(--border-dark-pink);
+    border-style: dashed;
+    margin-bottom: 1.5rem;
+}
+.productItemImg img {
+    width: 100%;
+    padding-bottom: 1rem;
+}
+.productItem h5 {
+    /* font-weight: 600; */
+    text-transform: none;
+}
+.productItem h5 a {
+    color: var(--primary-text);
+}
+.productItemImg {
+    padding: 2rem 1rem;
+    background-color: var(--bg-light-pink);
+    border: 1px var(--border-dark-pink);
+    border-style: dashed;
+}
+.productItemHover {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+.addToFavouriteHeart , .addToFavouriteFillHeart {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+.addToFavouriteHeart i{
+    font-size: 2rem;
+    color: #ffffff;
+}
+.addToFavouriteFillHeart i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+.addToFavouriteFillHeart i {
+    /* display: none; */
+}
+.addToFavouriteFillHeart:hover .addToFavouriteFillHeart i {
+    display: block;
+}
+.productItemHoverDashBorder {
+    background-color: transparent;
+    width: 93%;
+    height: 93%;
+    position: absolute;
+    margin: 0 auto;
+    border: 1px #ffffff;
+    border-style: dashed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 111;
+}
+.productHoverDetails {
+    padding: 0;
+    position: relative;
+    z-index: 222;
+}
+.productHoverDetails p {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.productHoverDetails h5 {
+    color: #ffffff;
+    text-transform: unset;
+}
+.productHoverBtns {
+    margin-top: 1.5rem;
+}
+.productHoverBtns a.blackBtn {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--bg-white);
+}
+.productHoverBtns a:first-child {
+    background-color: var(--primary-color);
+}
+.productItem h5 a:hover {
+    color: var(--primary-color);
+}
+.productItemWrapper:hover .productItemHover {
+    display: block;
+    cursor: pointer;
+}/* Products Page CSS ends here --------------------------------------------------------------------------- */
+
+
+/* Enquire Now Page CSS --------------------------------------------------------------------------- */
+
+#productEnquiry {
+    background-color: var(--bg-light-pink);
+}
+.productEnquiryForm {
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+/* Products Page CSS ends here --------------------------------------------------------------------------- */
+
+
+/* Product Details Page CSS --------------------------------------------------------------------------- */
+
+#productDetails {
+    background-color: var(--bg-light-pink);
+}
+.productDetailsWrapper {
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.productDetailsContent {
+    padding: 0 1rem;
+}
+.productDetailsImg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productDetailsHeading .getPricebBtn {
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+}
+.productDetailsHeading .getPricebBtn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    cursor: pointer;
+}
+.productDetailsTable h4 {
+    text-transform: none;
+}
+.productDetailsTable tr {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5px 0 0.6rem 0;
+    display: inline-block;
+    width: 100%;
+}
+.productDetailsTable tr td {
+    color: var(--secondary-text);
+    width: 50%;
+}
+.productDetailsTable td strong {
+    color: var(--primary-text);
+}
+.productDetailsTable tr td {
+    width: 175px;
+}
+.productDetailsTable tr:last-child {
+    border-bottom: none;
+}
+.productDetailsShareIcons ul li {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+.productDetailsShareIcons ul li i {
+    color: var(--secondary-color);
+}
+.productDetailsShareIcons ul li:hover i {
+    color: var(--primary-color);
+}
+.productDetailsBtnOutline , .productDetailsBtnFill {
+    padding: 0.8rem 2.5rem;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-align: center;
+    width: 49%;
+    font-weight: 600;
+}
+.productDetailsBtnOutline {
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-text);
+
+}
+.productDetailsBtnOutline:hover {
+    color: var(--text-white);
+    background-color: var(--secondary-color);
+}
+.productDetailsBtnFill {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: 1px solid var(--primary-color);
+    
+}
+.productDetailsBtnFill:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+    border: 1px solid var(--secondary-color);
+}
+.productDetailsBreadCrumb {
+    background-color: var(--border-dark-pink);
+    padding: 0.3rem 0.8rem;
+}
+.productDetailsBreadCrumb .breadcrumb a {
+    color: var(--secondary-text);
+}
+.productDetailsBreadCrumb .breadcrumb {
+    margin-bottom: 0;
+}
+.productDetailsBreadCrumb .breadcrumb-item+.breadcrumb-item::before {
+    content: "/" !important;
+    color: var(--secondary-text);
+}
+.productDetailsBreadCrumb .breadcrumb-item.active {
+    color: var(--secondary-color);
+}
+.productSpecificationsTable tr {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5px 0 0.6rem 0;
+    display: inline-block;
+    width: 100%;
+}
+.productSpecificationsTable tr td {
+    color: var(--secondary-text);
+}
+.productSpecificationsTable tr td {
+    width: 175px;
+}
+.productSpecificationsTable tr:last-child {
+    border-bottom: none;
+}
+.productSpecifications {
+    /* padding: 3rem; */
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.productSpecifications h5 {
+    background-color: var(--border-dark-pink);
+    padding: 0.5rem 1rem;
+}
+.productSpecificationsTable {
+    border: 1px solid var(--border-dark-pink);
+}
+.productSpecificationsTable tr {
+    padding: 0;
+    float: left;
+}
+.productSpecificationsTable tr td {
+    padding: 0.5rem 1rem;
+}
+.productSpecificationsTable tr td:first-child {
+    background-color: var(--bg-light-pink);
+    border-right: 1px solid var(--border-dark-pink);
+}/* Product Details Page CSS ends here--------------------------------------------------------------------------- */
+
+
+
+/* About Us Page CSS --------------------------------------------------------------------------- */
+
+#aboutUsBanner {
+    background: url(../images/banner-1.jpg) no-repeat center top;
+    position: relative; 
+}
+#aboutUsBanner h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 3.5rem 0;
+    margin: 0;
+}
+/* .aboutUsBanner::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top:0;
+    right:0;
+    margin:0 auto;
+} */
+.aboutImg img {
+    width: 100%;
+}
+#aboutUsPage .aboutUsContent h2 ,
+#aboutUsPage .aboutUsContent p ,
+#aboutUsPage .aboutUsContent ul {
+    color: var(--secondary-color);
+}
+#aboutUsPage .aboutUsContent ul li {
+    color: var(--secondary-color);
+}
+#aboutUsPage .aboutUsContent ul li i {
+    color: var(--primary-color);
+}
+.aboutImg {
+    position: relative;
+}
+.whyUs {
+    margin-top: 1.5rem;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: -6.5rem;
+    text-align: center;
+}
+.whyUs strong {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--primary-color)
+}
+.whyUs li {
+    background-color: var(--bg-white);
+    color: #ffffff;
+    font-size: 1.5rem;
+    width: 10rem;
+    text-align: center;
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 3rem;
+    color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.whyUs p {
+    color: var(--secondary-color);
+    margin: 0;
+    line-height: 1;
+    font-size: 0.83rem;
+}
+#missionVision {
+    background-color: var(--bg-light-pink);
+}
+.missionVisionCard {
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+}
+.missionVisionIcon {
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+    text-align: center;
+    border: 0.65rem solid var(--bg-light-pink);
+}
+.missionVisionIcon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    padding: 1.5rem 0;
+    border: 2px dashed var(--primary-color);
+    display: inline-block;
+    width: 100%;
+    border-radius: 100%;
+}
+.missionVisionCard:hover i {
+    background-color: var(--primary-color);
+    color:#ffffff;
+    border: 2px solid var(--primary-color);
+}
+.missionVisionDescription {
+    padding-top: 3rem;
+}
+/* .aboutImg::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    right:-1.7rem;
+    width:1px;
+    height:100%;
+    border: 1px dashed var(--primary-color);
+    /* background-color: var(--primary-color);
+    z-index: -111;
+} */
+.aboutPageTestimonials .sectionHeading::after {
+    width: 3rem;
+    height: 0.3rem;
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 3.1rem;
+}
+.aboutPageTestimonialsWrapper {
+    width: 70%;
+    margin:  0 auto;
+}
+.aboutPageTestimonialsWrapper .testimonialWrapper p , .aboutPageTestimonialsWrapper .testimonialWrapper span {
+    text-align: center;
+    display: block;
+}/* About Us Page CSS ends here--------------------------------------------------------------------------- */
+
+
+/* Contact Us Page CSS--------------------------------------------------------------------------- */
+
+#contactUs {
+    background-color: var(--bg-light-pink);
+}
+.contactAddress .contactInfo ul li a h6 {
+    color: var(--primary-text);
+    font-weight: 600;
+}
+.contactAddress .contactInfo ul li {
+    margin-bottom: 0.6rem;
+}
+.contactAddress {
+    border-bottom: 1px solid #dddddd;
+}
+.contactForm {
+    padding: 2rem;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.contactMap {
+    margin-left: 3.5rem;
+}
+
+.contactAddress li:first-child strong {
+    display: block;
+    color:var(--primary-text);
+}/* Contact Us Page CSS ends here--------------------------------------------------------------------------- */
+
+
+/* E-Catalogue Page CSS --------------------------------------------------------------------------- */
+
+#eCatalogue {
+    background-color: var(--bg-light-pink);
+}
+.eCatalogueImg {    
+    margin-bottom: 1rem !important;
+    width: 9rem;
+    margin: 0 auto;
+}
+.eCatalogueItem p {
+    margin-bottom: 0;
+    text-align: center;
+}
+.eCatalogueItem:hover {
+    border:1px var(--primary-color);
+    border-style: dashed;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.eCatalogueItem {
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+/* E-Catalogue Page CSS ends here--------------------------------------------------------------------------- */
+
+

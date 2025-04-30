@@ -1,0 +1,306 @@
+@charset "utf-8";
+/* Responsive */
+
+@media (max-width: 1199.5px) {
+
+    
+
+
+}
+
+@media (max-width:991.98px) {
+
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .upperHeaderMenu {
+        position: absolute;
+        right: 0;
+        padding-right: 0.6rem;
+    }
+    .headerSocialIcons li, .upperHeaderMenu li {
+        padding-right: 0.6rem;
+        position: relative;
+    }
+    .headerSocialIcons::after {
+        width:1px;
+        height: 1.95rem;
+        content:"";
+        position:absolute;
+        top:-5px;
+        left:6.4rem;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .owl-item {
+        width: 382px;
+    }
+    .upperHeader {
+        padding: 0.3rem 0;
+        height: 2rem;
+    }
+    .headerSocialIcons {
+        position: absolute;
+        left: 1rem;
+    }
+    .middleHeaderWrapper {
+        position: relative;
+    }
+    .headerSocialIcons li a, .upperHeaderMenu li a {
+        font-size: 0.8rem;
+    }
+    .navbar-brand img {
+        width: 4.5rem;
+    }
+    .navbar-toggler {
+        position: absolute;
+        top: -3.7rem;
+        right: 0rem;
+    }
+    .navbar-toggler-icon {
+        width: 2.4rem !important;
+        height: 2.2rem !important;
+        padding: 0.3rem;
+        border: 1px solid var(--text-white);
+        border-radius: 0.2rem;
+        color: var(--text-white);
+        border: none;
+        font-size: 1.6rem;
+    }
+    .middleHeaderNavbar {
+        z-index: 999;
+        position: absolute !important;
+        top: 4.3rem;
+        left: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+    .navbar-nav {
+        padding: 0.5rem 0 !important;
+    }
+    .navbar-nav .nav-item {
+        padding: 0 1rem !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .middleHeader {
+        position: relative;
+    }
+    .buySellBtn {
+        float: unset; 
+        margin: 0.5rem 0 0.5rem 0 !important;
+    }
+    .buySellBtnWrapper {
+        height: 50vh;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    #searchCategory {
+        width: 2.5rem;
+        display:none;
+    }
+    .searchBoxWrapper input {
+        display:none;
+    }
+    .categorySearchIcon {
+        position: absolute;
+        top: -1.5rem !important;
+        color: #fff;
+    }
+    .subHeader {
+        position: relative;
+        padding: 0.3rem 0;
+    }
+    .signInLink {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 1rem;
+    }
+    .homeBannerText h1 {
+        font-size: 2.188rem;
+    }
+    .homeWrapper .homeBanner .homeBannerText {
+        top:25%;
+        width: 90%;
+    }
+    .homeBannerText .blackBtn {
+        padding: 0.7rem 1.3rem;
+    }
+    .homeBannerText p {
+        font-size: 0.8rem;
+        letter-spacing: unset;
+    }
+    .sellerBuyerBenefits ul li:nth-child(3) {
+        margin-bottom:2rem;
+    }
+    #benefitsSection {
+        padding-bottom: 1.5rem;
+    }
+    .sectionHeading {
+        text-align: left !important;
+        font-size: 2rem !important;
+    }
+    #featuredProducts .sectionHeading::after {
+        margin: unset;
+    }
+    #topCategories h2.sectionHeading::after {
+        left: 1rem !important;
+        right: unset;
+    }
+    #topCategories .card.productCategory {
+        padding: 2rem;
+    }
+    #topCategories .productCategoryImg {
+        height: 13rem;
+    }
+    #aboutUs::before  {
+        display: none;
+    }
+    .testimonials {
+        margin: 1.2rem !important;
+    }
+    .esteemedCustomer {
+        margin: 1.2rem !important;
+    }
+    .sectionHeading.customerResponsiveHeading::after {
+        top: 6rem;
+    }
+    .newsLetterInput {
+        float: unset;
+    }
+    .newsLetterInput input {
+        width: 20.5rem;
+    }
+    .newsLettreHeading p {
+        margin-bottom: 1rem;
+    }
+    .testimonials {
+        margin-bottom:6.5rem !important;
+    }
+    .copyrightSection .socialNetwork {
+        display: inline-block;
+    }
+    .socialNetwork li {
+        float: left;
+    }
+    /*.copyrightSection  .container {
+        display: grid;
+    }*/
+    .copyrightSection  .container .copyright {
+        order: 1;
+        margin-bottom: 1rem !important
+    }
+    .copyrightSection  .container .socialNetwork {
+        order: 1;
+        display: inline-block;
+        width: 100%;
+    }
+    
+    /* Sign In Page Responsive */
+
+    #signIn form, .forgotPasswordWrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .signInForm p, .forgotPasswordWrapper p {
+        width: 75%;
+        margin: 0 auto;
+    }/* Sign In Page Responsive ends here*/
+
+    .caption {
+        display: inline-block;
+    }
+    .changePassword {
+        width: 100%;
+    }
+    .dasboardSidebarWrapper {
+        height: auto;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .addProductWrapper {
+        height: 50vh;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:991.98px) {
+
+
+    /* .middleHeaderNavbar {
+        margin-left: -6.5rem;
+        margin-right: -6.5rem;      
+    } */
+    /* .middleHeaderWrapper {
+        margin-left: -5.5rem;
+        margin-right: -5.5rem;
+    }
+    .navbar-toggler {
+        right: 5.5rem;
+    } */
+    .categorySearchIcon {
+        color: var(--secondary-text);
+        top:0 !important;
+    }
+    #searchCategory {
+        width: 1.5rem;
+        display:block;
+    }
+    .searchBoxWrapper {
+        width: 90%;
+    }
+    .searchBoxWrapper input {
+        display:block;
+    }
+    .signInLink {
+        bottom: -0.7rem;
+    }
+    .homeWrapper .homeBanner .homeBannerText {
+        width: 60%;
+    }
+    .homeBannerText h1 strong  {
+        display: inline-block;
+        width: 100%;
+    }
+    #featuredProducts .sectionHeading::after {
+        margin: 0 auto;
+    }
+    #topCategories .sectionHeading {
+        text-align: center !important;
+    }
+    #topCategories .sectionHeading::after {
+        right:0 !important;
+    }
+    .newsLetterFooter {
+        text-align: center;
+    }
+    .copyrightSection .container .socialNetwork {
+        width: auto;
+        float: right;
+    }
+    .copyrightSection {
+        width: 100%;
+        float: left;
+    }
+    #signIn form, .forgotPasswordWrapper {
+        width: 50%;
+    }
+    .caption {
+        display: inline-block;
+    }
+
+}
+
+
+
+
+
+
+
+
